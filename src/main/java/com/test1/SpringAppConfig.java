@@ -19,7 +19,7 @@ public class SpringAppConfig {
 	public Ignite igniteInstance() {
 		// TcpDiscoverySpi spi = new TcpDiscoverySpi();
 		// TcpDiscoveryVmIpFinder ipFinder = new TcpDiscoveryVmIpFinder();
-		// ipFinder.setAddresses(Arrays.asList("sbsvmlx10005", "sbsvmlx10002"));
+		// ipFinder.setAddresses(Arrays.asList("host1", "host2"));
 		// spi.setIpFinder(ipFinder);
 
 		IgniteConfiguration cfg = new IgniteConfiguration();
