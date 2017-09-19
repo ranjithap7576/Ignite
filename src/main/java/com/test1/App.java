@@ -18,13 +18,7 @@ public class App {
 		ctx = new AnnotationConfigApplicationContext();
 
 		ctx.register(App.class);
-		// ctx.register(MongoConfig.class);
 		ctx.refresh();
-
-		String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
-		for (String string : beanDefinitionNames) {
-			System.out.println("***********" + string + "***********");
-		}
 
 		breedRepository = ctx.getBean(BreedRepository.class);
 		dogRepository = ctx.getBean(DogRepository.class);
