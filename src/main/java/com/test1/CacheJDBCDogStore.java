@@ -50,9 +50,7 @@ public class CacheJDBCDogStore extends CacheStoreAdapter<Long, Dog> {
 
 	@Override
 	public void write(Entry<? extends Long, ? extends Dog> entries) throws CacheWriterException {
-		System.out.println("******************Write to your DB*********" + new Date(System.currentTimeMillis()));
 		mongoTemplate.save(entries.getValue());
-		System.out.println("saved in mogo" + new Date(System.currentTimeMillis()));
 
 	}
 
