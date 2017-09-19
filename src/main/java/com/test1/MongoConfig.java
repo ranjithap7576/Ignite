@@ -25,7 +25,6 @@ import com.mongodb.ServerAddress;
 @Configuration
 @PropertySource(value = { "classpath:mongo-sources.properties" })
 
-// @EnableMongoRepositories(basePackages = { "${mongo.package.repo}" })
 public class MongoConfig {
 
 	@Resource 
