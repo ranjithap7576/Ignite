@@ -16,7 +16,6 @@ public class App {
 	public static void main(String[] args) {
 		System.out.println("Spring Data with ignite Example!");
 		ctx = new AnnotationConfigApplicationContext();
-
 		ctx.register(App.class);
 		ctx.refresh();
 
@@ -43,9 +42,9 @@ public class App {
 		dina.setBreedid(1L);
 		dina.setBirthdate(new Date(System.currentTimeMillis()));
 		// Save Dina
-		dogRepository.save(2L, dina);
+		dogRepository.save(1L, dina);
 
-		System.out.println("Dog dina save into the cache! @" + new Date(System.currentTimeMillis()));
+		System.out.println("Dog dina save into the cache! @" );
 		// Query the Dog Dina
 		List<Dog> dogs = dogRepository.getDogByName("dina");
 		for (Dog dog : dogs) {
