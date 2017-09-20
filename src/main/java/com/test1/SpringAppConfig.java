@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @EnableIgniteRepositories
-@ComponentScan(basePackages = { "com.test1" })
+// @ComponentScan(basePackages = { "com.test1" })
 public class SpringAppConfig {
 	@Bean
 	public Ignite igniteInstance() {
@@ -39,6 +39,11 @@ public class SpringAppConfig {
 		// CacheJDBCDogStore()));
 		ccfgDog.setReadThrough(true);
 		ccfgDog.setWriteThrough(true);
+		
+		// Enable this if you want async persistence is server
+		// ccfgDog.setWriteBehindEnabled(true);
+		// ccfgDog.setWriteBehindBatchSize(500);
+		// ccfgDog.setWriteBehindFlushFrequency(1000L);
 		// Setting SQL schema for the cache.
 		ccfgDog.setIndexedTypes(Long.class, Dog.class);
 
